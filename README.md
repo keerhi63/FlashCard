@@ -1,4 +1,4 @@
-Simple Language Learning Flashcards
+FLASH LEARN : Simple Language Learning Flashcards
 
 Welcome to Simple Language Learning Flashcards! Our project aims to create an engaging and effective way for users to learn new words and phrases in foreign languages using flashcards. With features like progress tracking, custom flashcard creation, and periodic quizzing, our platform ensures a personalized and motivating learning experience.
 
