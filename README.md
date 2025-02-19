@@ -1,84 +1,60 @@
-# FlashCard
-The "Simple Language Learning Flashcards"  web app is designed to help users efficiently learn and retain foreign language vocabulary through an interactive and user-friendly experience. 
-This application allows users to create, edit, and manage personalized flashcards or use preloaded sets that cover common words and phrases. 
-It features a quiz mode that randomly tests users on their knowledge, incorporating an adaptive learning system that prioritizes words they struggle with the most.
+Simple Language Learning Flashcards
 
--- Working of the Flash Learn Webpage --
+Welcome to Simple Language Learning Flashcards! Our project aims to create an engaging and effective way for users to learn new words and phrases in foreign languages using flashcards. With features like progress tracking, custom flashcard creation, and periodic quizzing, our platform ensures a personalized and motivating learning experience.
 
-The Flash Learn webpage is a multi-page interactive flashcard learning platform designed to help users learn new languages through flashcards. 
-It includes authentication, flashcards with progress tracking, and user session management without relying on APIs.  
+🚀 Project Overview
+In today's globalized world, mastering new languages opens countless doors. We designed Simple Language Learning Flashcards to be a user-friendly, interactive, and effective tool for language learners of all levels. Our platform not only helps users expand their vocabulary but also keeps them motivated through consistent progress tracking and reminders.
 
-1. User Flow  
-A. Authentication (Login & Signup)
-1. Signup Page (/signup) 
-   - New users register with username, email, and password.  
-   - Password is hashed with bcrypt and stored in MongoDB.  
-   - After successful signup, they are redirected to the Login Page.  
+Key Features
 
-2. Login Page (/login) 
-   - Users enter credentials, which are verified against the database.  
-   - On successful login, a session is created using express-session.  
-   - Users are redirected to the Dashboard.  
+Flashcards: 
+- Users can create custom flashcards or use preloaded ones for languages like Spanish, French, and Japanese.
 
-3. Logout  
-   - Users can log out, which destroys their session and redirects them to /login.  
+Quiz Mode: 
+- Randomized quizzing to reinforce learning and ensure retention.
 
-B. Dashboard (dashboard)
-1. Displays progress tracking (percentage of mastered flashcards).  
-2. Provides navigation to different pages:  
-   - Flashcards
-   - Progress
-   - Settings  
+Progress Tracking: 
+- Visual indicators showing mastery levels and highlighting challenging words.
 
-C. Flashcards Page (/flashcards)
-1. Preloaded Flashcards:
-   - 15 English → Spanish 
-   - 15 English → French  
-   - 15 English → Japanese  
-   - Each language has Beginner, Intermediate, and Advanced levels.  
+Simple UI: 
+- Intuitive design for a seamless user experience.
 
-2. Flashcard Features:
-   - Users can *flip flashcards to view translations.  
-   - Can navigate using Next / Previous buttons.  
-   - Can filter by language and difficulty.  
-   - Each flashcard has a "Mark as Mastered" button.  
+Technologies Used:
 
-3. Marking Progress: 
-   - When a flashcard is marked as mastered, it updates the progress in MongoDB.  
+Frontend: React.js(web) or Flutter (mobile)
 
-D. Progress Page (/progress)
-1. Displays *total mastered flashcards.  
-2. Shows *progress bar (percentage completed).  
-3. Displays a pie chart (mastered vs. remaining cards) using Chart.js.  
-4. Lists mastered flashcards.  
+Backend: Node.jswith Express for server-side logic
 
-E. Add Flashcards Page (/add-flashcard)
-1. Users can add new flashcards by providing:  
-   - Word  
-   - Translation 
-   - Language(Spanish, French, Japanese)  
-   - Difficulty Level(Beginner, Intermediate, Advanced)  
+Database: MongoDB for storing flashcards and user progress
 
-2. The new flashcard is stored in MongoDB and appears in the flashcards list.  
+Notifications: Push notifications using OneSignal
 
-F. Backend (Node.js + Express.Js + MongoDB)
-- Uses EJS templates to render pages dynamically.  
-- Session-based authentication.  
-- Stores flashcards & user progress in MongoDB.  
-- Routes:  
-  - /signup → User registration  
-  - /login → User authentication  
-  - /dashboard → User progress overview  
-  - /flashcards → Flashcard display & interaction  
-  - /progress → User progress visualization  
-  - /add-flashcard → Adding new flashcards  
+Preloaded Data: Integrated with a free language API (e.g., Google Translate API)
 
-G. Deployment & Hosting
-- Backend hosted on Render/Vercel.  
-- MongoDB Atlas for cloud database storage  
-- Tailwind CSS for styling 
-- Backend hosted on Render/Vercel.  
-- MongoDB Atlas for cloud database storage  
-- Tailwind CSS for styling  
+🌟 Features in Detail
 
+1.Flashcards
+- Create and manage custom flashcards
 
+- Access preloaded flashcards in Spanish, French, and Japanese
+
+- Categorized into Beginner, Intermediate, and Advanced levels
+
+2.Quiz Mode
+- Randomized flashcard quizzing
+
+- Immediate feedback on correct and incorrect answers
+
+- Tracks user performance to adjust difficulty levels
+
+3.Progress Tracking
+- Monitors words the user gets right or wrong most often
+
+- Displays progress with visual indicators (e.g., progress bars, pie charts)
+
+- Highlights challenging words for focused learning
+
+4.Simple UI
+- Clean and intuitive interface for easy navigation
+
+- Responsive design for both web and mobile platforms
